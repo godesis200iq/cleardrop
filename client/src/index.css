@@ -1,0 +1,339 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ClearDrop Eco Color Palette */
+  --primary: 152 60% 42%;
+  --primary-foreground: 0 0% 100%;
+  --primary-dark: 152 60% 32%;
+  --primary-light: 152 45% 65%;
+  
+  --secondary: 195 70% 45%;
+  --secondary-foreground: 0 0% 100%;
+  --secondary-light: 195 55% 70%;
+  
+  --accent: 45 85% 55%;
+  --accent-foreground: 0 0% 15%;
+  
+  --background: 60 30% 96%;
+  --foreground: 150 25% 15%;
+  
+  --muted: 60 20% 90%;
+  --muted-foreground: 150 15% 40%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 150 25% 15%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 150 25% 15%;
+  
+  --border: 150 20% 85%;
+  --input: 150 20% 85%;
+  --ring: 152 60% 42%;
+  
+  --radius: 0.75rem;
+  
+  /* Nature tones */
+  --earth: 30 40% 35%;
+  --sand: 40 35% 75%;
+  --water-light: 195 80% 85%;
+  --water-dark: 200 70% 35%;
+  --leaf: 120 45% 40%;
+  
+  /* Gradient colors */
+  --gradient-start: 152 60% 95%;
+  --gradient-end: 195 70% 92%;
+}
+
+.dark {
+  --background: 150 25% 8%;
+  --foreground: 60 20% 95%;
+  --card: 150 20% 12%;
+  --card-foreground: 60 20% 95%;
+  --popover: 150 20% 12%;
+  --popover-foreground: 60 20% 95%;
+  --muted: 150 15% 20%;
+  --muted-foreground: 60 15% 70%;
+  --border: 150 15% 25%;
+  --input: 150 15% 25%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary-dark));
+}
+
+/* Animation classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Water ripple effect */
+.water-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+  animation: ripple 3s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient backgrounds */
+.eco-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--gradient-start)) 0%,
+    hsl(var(--gradient-end)) 100%
+  );
+}
+
+.water-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(195 80% 85% / 0.3) 0%,
+    hsl(200 70% 35% / 0.1) 100%
+  );
+}
+
+/* RTL support for Hebrew */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Loading screen styles */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, hsl(152 60% 95%) 0%, hsl(195 70% 92%) 100%);
+}
+
+.loading-drop {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, hsl(195 70% 45%) 0%, hsl(152 60% 42%) 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: dropBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes dropBounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(0.9);
+  }
+}
+
+/* Section styles */
+.section-container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6;
+  color: hsl(var(--primary-dark));
+}
+
+.section-subtitle {
+  @apply text-lg md:text-xl text-muted-foreground mb-8;
+}
+
+/* Card styles */
+.eco-card {
+  @apply rounded-2xl p-6 md:p-8 shadow-lg;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.eco-button {
+  @apply px-6 py-3 rounded-full font-semibold transition-all duration-300;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.eco-button:hover {
+  background: hsl(var(--primary-dark));
+  transform: scale(1.05);
+}
+
+/* Layer visualization */
+.layer-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.layer {
+  @apply rounded-lg p-4 text-center font-medium;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.layer:hover {
+  transform: scale(1.02);
+}
+
+.layer-pebbles {
+  background: linear-gradient(180deg, #a0a0a0 0%, #707070 100%);
+  color: white;
+}
+
+.layer-sand {
+  background: linear-gradient(180deg, #e0c090 0%, #c0a070 100%);
+  color: #3a3a3a;
+}
+
+.layer-charcoal {
+  background: linear-gradient(180deg, #404040 0%, #202020 100%);
+  color: white;
+}
+
+.layer-water {
+  background: linear-gradient(180deg, #60b0e0 0%, #3090c0 100%);
+  color: white;
+}
+
+/* Poster print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-only {
+    display: block !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .poster-page {
+    page-break-after: always;
+    padding: 20mm;
+  }
+}
+
+/* Three.js canvas container */
+.canvas-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, hsl(195 80% 95%) 0%, hsl(200 60% 90%) 100%);
+}
+
+@media (min-width: 768px) {
+  .canvas-container {
+    height: 500px;
+  }
+}
+
+/* Particle styles */
+.particle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.water-drop {
+  width: 8px;
+  height: 12px;
+  background: linear-gradient(180deg, rgba(96, 176, 224, 0.8) 0%, rgba(48, 144, 192, 0.6) 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.leaf {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, hsl(120 45% 50%) 0%, hsl(120 45% 35%) 100%);
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+}

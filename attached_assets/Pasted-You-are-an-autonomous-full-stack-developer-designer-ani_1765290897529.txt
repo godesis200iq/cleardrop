@@ -1,0 +1,191 @@
+You are an autonomous full-stack developer, designer, animator, brand designer, 3D modeler and technical writer.
+Your job is to build a COMPLETE animated website + brand package + poster + presentation + 1:1 accurate 3D model
+for the ClearDrop project using the content below.
+
+=========================
+PROJECT CONTENT (USE EXACT TEXT — DO NOT CHANGE IT)
+Title: ClearDrop — מערכת סינון מים אפורים למדשאות ומרפסות  
+Creators: גולן, איתן, דניאל — כיתה ט’, אלתרמן הרצליה  
+
+Problem:
+ישראל סובלת ממחסור חמור במים, אך משפחות רבות משקות צמחים במי שתייה טריים.
+באותו זמן, מים אפורים (מקלחת/כיור/מזגן) נזרקים לביוב למרות שניתן לסנן אותם בקלות.
+
+Solution — ClearDrop:
+מערכת סינון זולה ובטוחה שממחזרת מים אפורים להשקיה באמצעות:
+• צרורות קטנים  
+• חול  
+• פחם פעיל  
+
+How It Works (IMPORTANT — 3 LAYERS, MUST BE EXACTLY LIKE THIS):
+Layer 1 (top): צרורות + חול (pebbles + coarse sand)  
+Layer 2 (middle): פחם פעיל (granular activated carbon)  
+Layer 3 (bottom): מים נקיים (collection chamber)
+
+Benefits:
+• חוסך עד 10 ליטר מים ביום  
+• עלות נמוכה (פחות מ־10 ש"ח)  
+• קל לבנות בלי כלים מיוחדים  
+
+Materials (USE EXACTLY THIS LIST):
+• 3 × 1.5L plastic bottles (stacked vertically)
+• Activated charcoal (granular preferred)
+• Sand (washed)
+• Small pebbles
+• Old sock / cotton fabric (as pre-filter)
+• Scissors
+• Duct tape
+• Rope (optional)
+• Water container for output
+
+Safety Notes (must appear in website + poster):
+• ONLY for non-edible plants  
+• Do NOT connect to a pipe system  
+• Follow Israeli Ministry of Environment 2021 guidelines  
+• Replace charcoal every 2–6 weeks  
+• Avoid stagnant water / mosquitoes  
+
+Environmental Impact:
+• ~300 liters saved monthly  
+• Prevents plastic bottle waste  
+• Good for homes, balconies, community gardens  
+
+Tagline:
+“קלירדרופ הופך טיפות מבוזבזות לצמיחה ירוקה — מרפסת אחת בכל פעם."
+=========================
+
+
+=========================
+MANDATORY IMPROVEMENTS (ADD THESE TO THE WEBSITE & POSTER)
+(Use them as an optional “pro version” of the design)
+
+• Add a sedimentation chamber at the top to let solids settle before filtration.
+• Use granular activated carbon (GAC) instead of powder (better flow, less clogging).
+• Add a fine sand layer above the charcoal for improved particle removal.
+• Add a final fabric filter (coffee filter or cloth) before collection chamber.
+• Add a simple flow-rate control (small hole or valve).
+• Show optional “two-stage system”: let water settle 30 minutes before filtering.
+• Add maintenance instructions:
+    – Clean top layer weekly
+    – Replace charcoal monthly (heavy use) / every 6 weeks (light use)
+    – Dry system between uses to avoid odor
+• Show performance improvements (flow rate, clarity)
+=========================
+
+
+=========================
+3D MODEL REQUIREMENTS (VERY IMPORTANT — 1:1 ACCURATE)
+Create a 1:1 3D model of the exact ClearDrop prototype.
+
+DO NOT RANDOMIZE.
+DO NOT CHANGE STRUCTURE.
+DO NOT ADD ANY NEW PARTS.
+
+The 3D model MUST follow these explicit instructions:
+
+MODEL STRUCTURE (THREE-BOTTLE SYSTEM):
+1) Bottle A (top):
+   - Cut bottom removed.
+   - Filled with:
+       a) Layer 1: Pebbles (bottom of bottle A)
+       b) Layer 2: Coarse sand above pebbles
+       c) Fabric pre-filter on top (sock/cotton)
+   - Water is poured into this bottle.
+
+2) Bottle B (middle):
+   - Cut bottom removed.
+   - Filled with:
+       a) Layer 3: Granular activated charcoal (GAC)
+   - Charcoal layer should be thick.
+
+3) Bottle C (bottom):
+   - Top removed (open funnel shape).
+   - Collects clean water.
+   - Funnel inserted into a small cup/mini bucket (optional) in the model.
+
+STACKING ORDER:
+Bottle A inserted upside-down into Bottle B.
+Bottle B inserted upside-down into Bottle C.
+Water flows top → bottom ONLY by gravity.
+
+DIMENSIONS:
+- Standard 1.5L bottle proportions.
+- Keep correct scale so layers look realistic.
+
+MODEL OUTPUT:
+Provide:
+• A downloadable .glb OR .obj + .mtl + textures  
+• A preview screenshot  
+• A render in light + dark mode  
+• Source code if using Three.js or Blender scripting
+=========================
+
+
+=========================
+STYLE REQUIREMENTS (WEBSITE)
+Copy the FEEL and VIBE of “Utazon.fr”:
+- cinematic loading screen
+- GSAP + ScrollTrigger animations
+- parallax sections
+- 3D floating particles (leaves/water droplets)
+- water ripple background effects
+- minimalistic eco design
+- soft greens, off-whites, and natural colors
+=========================
+
+
+=========================
+YOUR TASKS (DO ALL OF THIS)
+
+1) Generate a full website:
+   - index.html
+   - styles.css
+   - script.js
+   - assets folder
+   - GSAP animations
+   - parallax
+   - 3D particles
+   - ripple shader effect (if possible)
+   - mobile responsive
+
+2) Generate a full custom logo:
+   - Provide SVG
+   - Light + dark versions
+   - Brand usage rules
+
+3) Generate professional color palette:
+   - Primary, secondary, accents, neutrals
+   - Eco-themed
+   - Show hex codes + usage
+
+4) Create the competition poster:
+   - Full layout in printable HTML/CSS or PDF structure
+   - Include problem, solution, safety, layers, materials, improvements
+
+5) Create the presentation script:
+   - 2–3 minutes long
+   - Intro → problem → solution → how it works → tests → impact → improvements → conclusion
+
+6) Creates FULL 3D model of the prototype (1:1 accurate):
+   - Using the exact layer order
+   - Using real bottle proportions
+   - Using correct materials
+   - Including render views
+   - Including downloadable files
+
+7) Self-improve everything:
+   - Fix layout & animation issues
+   - Improve visual clarity
+   - Optimize code
+   - Improve UX without asking me anything
+
+Deliver final output in these sections:
+SECTION 1: Website Files  
+SECTION 2: Logo Files  
+SECTION 3: Color Palette  
+SECTION 4: Competition Poster  
+SECTION 5: Presentation Script  
+SECTION 6: 3D Model Package  
+SECTION 7: Final Self-Check & Improvements  
+
+Start now.
